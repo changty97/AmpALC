@@ -2,6 +2,7 @@
 """Main Module"""
 
 from devices.microphone import microphone
+from devices.capture_card import capture_card
 from file import file
 
 
@@ -11,8 +12,12 @@ def main():
     config = file('config.ini')
     device_type = config.get_from_config('SETTINGS', 'device_type')
 
-    mic = microphone(device_type)
-    print(mic.get_device())
+    if device_type == 'microphone':
+        mic = microphone(device_type)
+        print(mic.get_device())
+    else:
+        cap_card = capture_card(device_type)
+        print(cap_card.get_device())
 
 
 if __name__ == '__main__':

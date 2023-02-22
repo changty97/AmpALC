@@ -1,6 +1,8 @@
 # Developed By: Tyler Chang
 """Module for devices."""
 
+# pylint: disable=W0511
+
 
 class device():
     """Base class for devices.
@@ -13,3 +15,6 @@ class device():
         """Returns the device as a string.
         """
         return self.device_type
+
+    # TODO: Method to get amplifier volume control commands
+    # TODO: Method adjust volume accordingly
