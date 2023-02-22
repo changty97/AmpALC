@@ -1,3 +1,4 @@
 configparser
 pre-commit
+pylint
 SpeechRecognition
