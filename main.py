@@ -9,8 +9,8 @@ from file import file
 def main():
     """The main function that opens an ini file and gets the attributes.
     """
-    config = file('config.ini')
-    device_type = config.get_from_config('SETTINGS', 'device_type')
+    config = file()
+    device_type = config.get_device_type()
 
     if device_type == 'microphone':
         mic = microphone(device_type)
